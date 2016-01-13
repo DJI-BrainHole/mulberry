@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<script src="lib/vue.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>今天吃什么</title>
+</head>
+<body>
+
+<div id = "selection">
+<input type="checkbox" id="dingji" value="丁记烩面" v-model="checkedNames">
+<label for="dingji">丁记烩面</label>
+    <br>
+<input type="checkbox" id="miandian" value="面点王" v-model="checkedNames">
+<label for="miandian">面点王</label>
+    <br>
+<input type="checkbox" id="jiye" value="吉野家" v-model="checkedNames">
+<label for="jiye">吉野家</label>
+<br>
+    <input type="checkbox" id="chuanyu" value="川渝记" v-model="checkedNames">
+    <label for="chuanyu">川渝记</label>
+    <br>
+
+    <input type="checkbox" id="dashi" value="大食尚" v-model="checkedNames">
+    <label for="dashi">大食尚</label>
+    <br>
+
+    <input type="checkbox" id="mcd" value="麦当劳" v-model="checkedNames">
+    <label for="mcd">麦当劳</label>
+    <br>
+    <br>
+
+<span>选择范围：{{ checkedNames }}</span>
+</div>
+
+<div v-if= "ok">hello</div>
+
+<script>
+    new Vue({
+        el: '#selection',
+        data:{
+            checkedNames: []
+        }
+    })
+</script>
+
+</body>
+</html>
